@@ -19,7 +19,7 @@ android {
         applicationId = "com.alexandercbgm.ugomonikota"
         minSdk = 24
         targetSdk = 36
-        versionCode = 43
+        versionCode = 44
         versionName = "1.1"
     }
 
@@ -58,4 +58,6 @@ android {
 
 dependencies {
     implementation("com.android.billingclient:billing:9.1.0")
+    // Billing pulls in androidx.fragment 1.1.0 transitively, which Play flags as outdated
+    implementation("androidx.fragment:fragment:1.8.9")
 }
